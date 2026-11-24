@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VASTRA</title>
+  <meta name="description" content="VASTRA, clothing made to move.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <a href="#hero" class="navbar__logo">VASTRA</a>
+    <div class="navbar__actions">
+      <a class="wl" id="wlBtn" href="#/wishlist" aria-label="Wishlist, 0 items">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" />
+        </svg>
+        <span class="cart__badge" id="wlBadge" hidden>0</span>
+      </a>
+      <div class="acct-wrap">
+        <a class="acct" id="acctBtn" href="#/login" aria-label="Log in">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c1.4-3.6 4.4-5.5 8-5.5s6.6 1.9 8 5.5" />
+          </svg>
+          <span class="acct__ini" id="acctIni" aria-hidden="true"></span>
+        </a>
+        <div class="acct-pop" id="acctPop" hidden>
+          <p class="acct-pop__name" id="acctName"></p>
+          <p class="acct-pop__mail" id="acctMail"></p>
+          <button class="acct-pop__btn" id="logoutBtn" type="button">Sign out</button>
+        </div>
+      </div>
+      <button class="cart" id="cartBtn" type="button" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z" />
+          <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+        </svg>
+        <span class="cart__badge" id="cartBadge">0</span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu"
+        aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- FULLSCREEN MENU -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav aria-label="Primary">
+      <ul class="menu__list">
+        <li><a class="menu__link" href="#hero"><span>Home</span></a></li>
+        <li><a class="menu__link" href="#collections"><span>Collections</span></a></li>
+        <li><a class="menu__link" href="#featured"><span>Shop</span></a></li>
+        <li><a class="menu__link" href="#lookbook"><span>Lookbook</span></a></li>
+        <li><a class="menu__link" href="#newsletter"><span>Contact</span></a></li>
+      </ul>
+    </nav>
+    <div class="menu__foot"><span>Jaipur, India</span><span>hello@vastra.example</span></div>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" id="heroBg">
+        <div class="hero__parallax" id="heroParallax">
+          <img class="hero__img"
+            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2000&q=80"
+            alt="Model wearing the new VASTRA collection">
+        </div>
+      </div>
+      <div class="hero__shade"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__title" id="heroTitle" aria-label="Dress for the motion.">
+          <span class="line">Dress for</span>
+          <span class="line">the motion.</span>
+        </h1>
+        <p class="hero__sub">Lightweight layers, cut to move with you from the first light to the last train home.</p>
+        <a href="#collections" class="btn magnetic" id="cta">
+          <span class="btn__fill"></span>
+          <span class="btn__label">Shop the collection</span>
+        </a>
+      </div>
+
+      <div class="badge" id="badge" aria-hidden="true">
+        <svg class="badge__ring" viewBox="0 0 200 200">
+          <defs>
+            <path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" />
+          </defs>
+          <text>
+            <textPath href="#circ" textLength="484" lengthAdjust="spacing">NEW COLLECTION • 2026 • NEW COLLECTION • 2026
+              • </textPath>
+          </text>
+        </svg>
+        <svg class="badge__arrow" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+          stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 7l10 10M17 8v9H8" />
+        </svg>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" id="marquee" aria-label="Store announcements">
+      <div class="marquee__track" id="marqueeTrack">
+        <div class="marquee__group">
+          <span>Free shipping</span><b>•</b><span>New drop</span><b>•</b><span>Limited stock</span><b>•</b>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholder so you can test scrolling; later parts replace these -->
+    <!-- COLLECTIONS -->
+    <section class="section collections" id="collections">
+      <div class="collections__pin" id="colPin">
+        <h2 class="collections__title">Collections</h2>
+        <div class="collections__track" id="colTrack">
+          <a class="col-card" href="#featured">
+            <div class="col-card__img"><img
+                src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=75"
+                alt="Menswear" loading="lazy"></div>
+            <div class="col-card__info">
+              <h3>Men</h3><span class="col-card__go">Explore</span>
+            </div>
+          </a>
+          <a class="col-card" href="#featured">
+            <div class="col-card__img"><img
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=75"
+                alt="Womenswear" loading="lazy"></div>
+            <div class="col-card__info">
+              <h3>Women</h3><span class="col-card__go">Explore</span>
+            </div>
+          </a>
+          <a class="col-card" href="#featured">
+            <div class="col-card__img"><img
+                src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=75"
+                alt="Kidswear" loading="lazy"></div>
+            <div class="col-card__info">
+              <h3>Kids</h3><span class="col-card__go">Explore</span>
+            </div>
+          </a>
+          <a class="col-card" href="#featured">
+            <div class="col-card__img"><img
+                src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=75"
+                alt="Accessories" loading="lazy"></div>
+            <div class="col-card__info">
+              <h3>Accessories</h3><span class="col-card__go">Explore</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section featured" id="featured">
+      <div class="featured__head">
+        <h2 class="featured__title">Featured products</h2>
+        <div class="tabs" role="tablist" aria-label="Filter products">
+          <button class="tab" role="tab" aria-selected="true" data-filter="All">All</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="Tops">Tops</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="Bottoms">Bottoms</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="Outerwear">Outerwear</button>
+        </div>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+    <!-- LOOKBOOK -->
+    <section class="look" id="lookbook">
+      <div class="look__head">
+        <p class="look__eyebrow">Lookbook · SS26</p>
+        <h2 class="look__title">Worn in <em>motion</em></h2>
+      </div>
+      <div class="look__grid" id="lookGrid"></div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="news" id="newsletter">
+      <div class="news__inner">
+        <p class="news__eyebrow">Newsletter</p>
+        <h2 class="news__title" id="newsTitle">Join the list for first access to new drops, studio notes and quiet
+          sales.</h2>
+        <form class="news__form" id="newsForm" novalidate>
+          <div class="field" id="newsField">
+            <input type="email" id="newsEmail" name="email" placeholder=" " autocomplete="email" required
+              aria-describedby="newsMsg">
+            <label for="newsEmail">Your email address</label>
+            <span class="field__line"></span>
+            <button class="news__submit" id="newsBtn" type="submit" aria-label="Subscribe">
+              <svg class="news__arrow" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+              <svg class="news__check" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="26" cy="26" r="23" />
+                <path d="M15 27l8 8 15-17" />
+              </svg>
+            </button>
+          </div>
+          <p class="news__msg" id="newsMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <div class="view" id="viewProduct" hidden></div>
+  <div class="view" id="viewAuth" hidden></div>
+  <div class="view" id="viewWish" hidden></div>
+  <div class="view" id="viewCheckout" hidden></div>
+  <!-- FOOTER -->
+  <footer class="foot" id="footer">
+    <div class="foot__top">
+      <p class="foot__intro">Clothing made to move. Designed in Jaipur, worn everywhere.</p>
+      <nav class="foot__cols" aria-label="Footer">
+        <div class="foot__col">
+          <h3>Shop</h3>
+          <ul>
+            <li><a class="flink" href="#featured"><span>New arrivals</span></a></li>
+            <li><a class="flink" href="#collections"><span>Collections</span></a></li>
+            <li><a class="flink" href="#featured"><span>Outerwear</span></a></li>
+            <li><a class="flink" href="#featured"><span>Accessories</span></a></li>
+          </ul>
+        </div>
+        <div class="foot__col">
+          <h3>Company</h3>
+          <ul>
+            <li><a class="flink" href="#lookbook"><span>Lookbook</span></a></li>
+            <li><a class="flink" href="#"><span>Our story</span></a></li>
+            <li><a class="flink" href="#"><span>Journal</span></a></li>
+            <li><a class="flink" href="#"><span>Careers</span></a></li>
+          </ul>
+        </div>
+        <div class="foot__col">
+          <h3>Help</h3>
+          <ul>
+            <li><a class="flink" href="#"><span>Shipping</span></a></li>
+            <li><a class="flink" href="#"><span>Returns</span></a></li>
+            <li><a class="flink" href="#"><span>Size guide</span></a></li>
+            <li><a class="flink" href="#newsletter"><span>Contact</span></a></li>
+          </ul>
+        </div>
+        <div class="foot__col">
+          <h3>Follow</h3>
+          <ul>
+            <li><a class="flink" href="#"><span>Instagram</span></a></li>
+            <li><a class="flink" href="#"><span>Pinterest</span></a></li>
+            <li><a class="flink" href="#"><span>YouTube</span></a></li>
+            <li><a class="flink" href="#"><span>X / Twitter</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="foot__brand" aria-label="VASTRA">
+      <span class="ch" aria-hidden="true"><i>V</i></span><span class="ch" aria-hidden="true"><i>A</i></span><span
+        class="ch" aria-hidden="true"><i>S</i></span><span class="ch" aria-hidden="true"><i>T</i></span><span class="ch"
+        aria-hidden="true"><i>R</i></span><span class="ch" aria-hidden="true"><i>A</i></span>
+    </div>
+
+    <div class="foot__bar">
+      <span>© 2026 VASTRA. All rights reserved.</span>
+      <span>Jaipur, India</span>
+      <span><a class="flink" href="#"><span>Privacy</span></a> &nbsp;/&nbsp; <a class="flink"
+          href="#"><span>Terms</span></a></span>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="totop" id="toTop" type="button" aria-label="Back to top">
+    <svg class="totop__ring" viewBox="0 0 56 56" aria-hidden="true">
+      <circle class="totop__track" cx="28" cy="28" r="25" />
+      <circle class="totop__bar" id="toTopBar" cx="28" cy="28" r="25" />
+    </svg>
+    <svg class="totop__arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- CART DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+    <header class="drawer__head">
+      <h2>Your cart <span id="drawerCount">(0)</span></h2>
+      <button class="drawer__close" id="drawerClose" type="button" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </header>
+
+    <div class="drawer__body" id="drawerBody" data-lenis-prevent>
+      <ul class="drawer__list" id="cartList"></ul>
+
+      <div class="drawer__empty" id="cartEmpty">
+        <svg class="bag" viewBox="0 0 120 120" width="120" height="120" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M28 44h64l-6 54a5 5 0 0 1-5 4.5H39a5 5 0 0 1-5-4.5L28 44z" />
+          <path d="M44 44V34a16 16 0 0 1 32 0v10" />
+          <circle class="spark s1" cx="16" cy="28" r="2" fill="#c8a96a" stroke="none" />
+          <circle class="spark s2" cx="104" cy="38" r="2.5" fill="#c8a96a" stroke="none" />
+          <circle class="spark s3" cx="98" cy="14" r="1.8" fill="#c8a96a" stroke="none" />
+        </svg>
+        <p class="drawer__empty-title">Your cart is empty</p>
+        <span class="drawer__empty-sub">Looks like you haven’t picked anything yet.</span>
+        <a class="drawer__shop" id="emptyShop" href="#featured">Start shopping</a>
+      </div>
+    </div>
+
+    <footer class="drawer__foot" id="drawerFoot">
+      <div class="drawer__row"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div>
+      <p>Shipping and taxes calculated at checkout.</p>
+      <button class="drawer__checkout" id="checkoutBtn" type="button">Checkout</button>
+    </footer>
+  </aside>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <div class="lightbox__bg"></div>
+    <button class="lightbox__close" id="lbClose" type="button" aria-label="Close image">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+    <p class="lightbox__cap" id="lbCap"></p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
